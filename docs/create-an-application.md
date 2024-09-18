@@ -41,7 +41,8 @@ destination:
 - spec.syncPolicy:
 ```
 syncPolicy:
-  automated: {}
+    automated:
+      selfHeal: true
 ```
 
 ## Applying, commit and checking
