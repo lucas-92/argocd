@@ -16,7 +16,7 @@ git push -u origin main
 git checkout -b "feat/day2"
 ```
 
-## The yaml file of Application
+## The yaml file of Application [>Sample Here<](https://github.com/lucas-92/descomplicando-gitops-no-kubernetes-argocd/blob/feat/day2/applications/giropops-senhas.yaml)
 
 First we will create a new directory to organize our project, because we are working with an one [repo](https://github.com/lucas-92/descomplicando-gitops-no-kubernetes-argocd):
 ```
@@ -44,13 +44,21 @@ destination:
 syncPolicy:
   automated: {}
 ```
-## Applying and checking
+## Applying, commit and checking
 
 Apply:
 ```
 k apply -f applications/giropops-senhas.yaml
 ```
 
-We can check our Application in the Argo CD UI/Applications:
-![image](https://github.com/user-attachments/assets/7ec704df-3c17-4d1f-9a2a-8475ef7cbeda)
+Commit:
+```
+git add .
+git commit -m "feat: add application for giropops-senhas"
+git push --set-upstream origin feat/day2
+```
+
+Checking:
+- We can check our Application in the Argo CD UI/Applications:
+![image](https://github.com/user-attachments/assets/e2f1ebf7-51ac-4ec9-b050-cd01b4e902f8)
 
