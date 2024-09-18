@@ -16,8 +16,7 @@ git push -u origin main
 git checkout -b "feat/day2"
 ```
 
-## The yaml file of Application
-
+## The yaml file of Application: [giropops-senhas.yaml](https://github.com/lucas-92/argocd/blob/main/yaml-files/giropops-senhas.yaml)
 First we will create a new directory to organize our project, because we are working with an one repo:
 ```
 mkdir applications
@@ -44,10 +43,8 @@ destination:
 syncPolicy:
   automated: {}
 ```
-[giropops-senhas.yaml (Sample file)](https://github.com/lucas-92/argocd/blob/main/yaml-files/giropops-senhas.yaml)
 
 ## Applying, commit and checking
-
 Apply:
 ```
 k apply -f applications/giropops-senhas.yaml
