@@ -24,7 +24,6 @@ mkdir applications
 cd applications/
 vim giropops-senhas.yaml
 ```
-
 We need three sections base in our file:
 - spec.source:
 ```
@@ -45,3 +44,11 @@ destination:
 syncPolicy:
   automated: {}
 ```
+## Applying and checking
+
+Apply:
+```
+k apply -f applications/giropops-senhas.yaml
+```
+
+We can check our Application in the Argo CD UI/Applications
