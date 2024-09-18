@@ -51,4 +51,6 @@ Apply:
 k apply -f applications/giropops-senhas.yaml
 ```
 
-We can check our Application in the Argo CD UI/Applications
+We can check our Application in the Argo CD UI/Applications:
+![image](https://github.com/user-attachments/assets/7ec704df-3c17-4d1f-9a2a-8475ef7cbeda)
+
