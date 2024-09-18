@@ -23,3 +23,10 @@ Use echo | base64 in the password field:
 ```
 echo aS3ZkaTbU1XS3ZkaTg2S3ZkaT== | base64 -d
 ```
+
+Portforward argocd-server to access:
+```
+k port-forward -n argocd svc/argocd-server 3443:443
+```
+
+Use 'admin' and the password to access Argo CD
