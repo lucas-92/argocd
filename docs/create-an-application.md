@@ -43,5 +43,5 @@ destination:
 - spec.syncPolicy:
 ```
 syncPolicy:
-  automated
+  automated: {}
 ```
