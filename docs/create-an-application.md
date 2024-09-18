@@ -16,9 +16,9 @@ git push -u origin main
 git checkout -b "feat/day2"
 ```
 
-## The yaml file of Application [>Sample Here<](https://github.com/lucas-92/descomplicando-gitops-no-kubernetes-argocd/blob/feat/day2/applications/giropops-senhas.yaml)
+## The yaml file of Application
 
-First we will create a new directory to organize our project, because we are working with an one [repo](https://github.com/lucas-92/descomplicando-gitops-no-kubernetes-argocd):
+First we will create a new directory to organize our project, because we are working with an one repo:
 ```
 mkdir applications
 cd applications/
@@ -44,6 +44,8 @@ destination:
 syncPolicy:
   automated: {}
 ```
+[>giropops-senhas.yaml (Sample file)<](https://github.com/lucas-92/argocd/blob/main/yaml-files/giropops-senhas.yaml)
+
 ## Applying, commit and checking
 
 Apply:
