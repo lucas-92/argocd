@@ -44,7 +44,7 @@ destination:
 syncPolicy:
   automated: {}
 ```
-[>giropops-senhas.yaml (Sample file)<](https://github.com/lucas-92/argocd/blob/main/yaml-files/giropops-senhas.yaml)
+[giropops-senhas.yaml (Sample file)](https://github.com/lucas-92/argocd/blob/main/yaml-files/giropops-senhas.yaml)
 
 ## Applying, commit and checking
 
