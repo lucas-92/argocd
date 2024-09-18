@@ -14,3 +14,12 @@ Get secrets:
 k get secrets -n argocd
 ```
 
+Get yaml output of the secret called: argocd-initial-admin-secret
+```
+k get secret argocd-initial-admin-secret -n argocd -o yaml
+```
+
+Use echo | base64 in the password field:
+```
+echo aS3ZkaTbU1XS3ZkaTg2S3ZkaT== | base64 -d
+```
