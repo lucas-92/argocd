@@ -15,5 +15,14 @@ The yaml files of app-of-apps:
   ```
 - randomlogger-app.yaml
   ```
-  apiVersion:
+  apiVersion: argoproj.io/v1alpha1
+  kind: Application
+  metada:
+    name: random-logger
+    namespace: argocd
+  spec:
+    destination:
+      namespace: random-logger
+      server: https://kubernetes.default.svc
+    project: default    
   ```
