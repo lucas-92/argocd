@@ -11,7 +11,25 @@ mkdir templates
 The yaml files of app-of-apps:
 - giropops-app.yaml
   ```
-  apiVersion: 
+  apiVersion: argoproj.io/v1alpha1
+  kind: Application
+  metada:
+    name: giropops-senhas
+    namespace: argocd
+  spec:
+    destination:
+      namespace: giropops-senhas
+      server: https://kubernetes.default.svc
+    project: default
+    source:
+      path: giropops-senhas/helm
+      repoURL: git@github.com:lucas-92/descomplicando-gitops-no-kubernetes-argocd.git
+      targetRevision: feat/day2
+    syncPolicy:
+      automated:
+        selfHeal: true
+      syncOptions:
+      - CreateNamespace=true
   ```
 - randomlogger-app.yaml
   ```
@@ -24,5 +42,14 @@ The yaml files of app-of-apps:
     destination:
       namespace: random-logger
       server: https://kubernetes.default.svc
-    project: default    
+    project: default
+    source:
+      path: random-logger/helm
+      repoURL: git@github.com:lucas-92/descomplicando-gitops-no-kubernetes-argocd.git
+      targetRevision: feat/day2
+    syncPolicy:
+      automated:
+        selfHeal: true
+      syncOptions:
+      - CreateNamespace=true
   ```
