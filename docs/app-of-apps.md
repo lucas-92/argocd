@@ -7,6 +7,7 @@ Create the directory structure
 mkdir app-of-apps
 cd app-of-apps/
 mkdir templates
+cd templates/
 ```
 The yaml files of app-of-apps:
 - giropops-app.yaml
@@ -53,3 +54,16 @@ The yaml files of app-of-apps:
       syncOptions:
       - CreateNamespace=true
   ```
+- Chart.yaml
+  ```
+  apiVersion: v2
+  name: app-of-apps
+  description: A Helm chart for app-of-apps
+  version: 0.1.0
+  ```
+Committing the changes:
+```
+git add .
+git commit -m "feat: add app of apps"
+git push
+```
