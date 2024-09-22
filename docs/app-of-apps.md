@@ -61,7 +61,7 @@ The yaml files of app-of-apps:
   description: A Helm chart for app-of-apps
   version: 0.1.0
   ```
-Create the app-of-apps.yaml file inside application/ directory
+Create the `app-of-apps.yaml` file inside `application/` directory
 - app-of-apps.yaml
 ```
 apiVersion: argoproj.io/v1alpha1
