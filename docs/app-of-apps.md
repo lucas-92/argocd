@@ -24,7 +24,7 @@ The yaml files of app-of-apps:
     project: default
     source:
       path: giropops-senhas/helm
-      repoURL: git@github.com:lucas-92/descomplicando-gitops-no-kubernetes-argocd.git
+      repoURL: https://github.com/lucas-92/descomplicando-gitops-no-kubernetes-argocd.git
       targetRevision: feat/day2
     syncPolicy:
       automated:
@@ -46,7 +46,7 @@ The yaml files of app-of-apps:
     project: default
     source:
       path: random-logger/helm
-      repoURL: git@github.com:lucas-92/descomplicando-gitops-no-kubernetes-argocd.git
+      repoURL: https://github.com/lucas-92/descomplicando-gitops-no-kubernetes-argocd.git
       targetRevision: feat/day2
     syncPolicy:
       automated:
@@ -61,6 +61,29 @@ The yaml files of app-of-apps:
   description: A Helm chart for app-of-apps
   version: 0.1.0
   ```
+Create the app-of-apps.yaml file inside application/ directory
+- app-of-apps.yaml
+```
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps
+  namespace: argocd
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: app-of-apps
+    repoURL: https://github.com/lucas-92/descomplicando-gitops-no-kubernetes-argocd.git
+    targetRevision: feat/day2
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+    - CreateNamespaces=true
+```
 Committing the changes:
 ```
 git add .
